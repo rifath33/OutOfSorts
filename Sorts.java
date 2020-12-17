@@ -17,19 +17,20 @@ public class Sorts{
   }
 
   public static void selectionSort(int[] data){
+
     for(int i = 0 ; i < data.length; i++){
-
-      for(int f = 0; f < data.length-i; f++){
-
-        if(data[f] < data[i]){
-          int memory = data[i];
-          data[i] = data[f];
-          data[f] = memory;
+    int memory = data[i];
+    int indexMemory = 0;
+      for(int f = 0; f < data.length-i-1; f++){
+        if(data[f] < memory){
+          memory = data[f];
+          indexMemory = f;
         }
-
       }
-
+      data[indexMemory] = data[i];
+      data[i] = memory;
     }
+    
   }
 
 }
