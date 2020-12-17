@@ -5,7 +5,6 @@ public class Sorts{
 
   //@param data the elements to be sorted.
   public static void bubbleSort(int[] data){
-    int workingRange = data.length;
     for(int i = 0; i < data.length; i++){
       for(int j = 0; j < data.length-i-1; j++){
         int memory = data[j+1];
@@ -18,7 +17,19 @@ public class Sorts{
   }
 
   public static void selectionSort(int[] data){
-    
+    for(int i = 0 ; i < data.length; i++){
+
+      for(int f = 0; f < data.length-i; f++){
+
+        if(data[f] < data[i]){
+          int memory = data[i];
+          data[i] = data[f];
+          data[f] = memory;
+        }
+
+      }
+
+    }
   }
 
 }
