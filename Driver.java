@@ -31,7 +31,9 @@ public class Driver{
           
       }else if(args[2].equals("sorted")){
 	      
-          
+          for(int i = 0; i < randData.length; i++){
+            randData[i] = i;
+          }
           
       }else if(args[2].equals("reversed")){
 	      
