@@ -34,21 +34,18 @@ d repeat a,b,c until the last index.
 
 */
   public static void selectionSort(int[] data){
-    for(int i = 0; i < data.length; i++){
-
-      // for(int f = 0; f < data.length; f++){
-      //   if(data[f] < data[i]){
-      //     swap(data, f, i);
-      //   }
+    for(int i = 0; i < data.length-1; i++){
 
       swap(data, indexOfSmallestElement(data, i, data.length), i);
-
 
     }
 
   }
 
 
+
+    // tools of the trade
+    
   public static void swap(int[] data, int indexA, int indexB){
     int memory = data[indexA];
     data[indexA] = data[indexB];
@@ -57,12 +54,11 @@ d repeat a,b,c until the last index.
 
   public static int indexOfSmallestElement(int[] data, int startInclusive,
   int endNonInclusive){
-    int memory = 0;
-    for(int i = 0; i < endNonInclusive; i++){
-      if(data[i] < data[memory])
-      memory = i;
+    for(int i = startInclusive; i < endNonInclusive; i++){
+      if(data[i] < data[startInclusive])
+      startInclusive = i;
     }
-    return memory;
+    return startInclusive;
   }
 
 
