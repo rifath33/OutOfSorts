@@ -42,7 +42,21 @@ d repeat a,b,c until the last index.
 
   }
 
-
+  public static void insertionSort(int[] data) {
+    for (int i = 1; i < data.length; i++) {
+        
+        int workingWith = data[i];
+        int previous = i - 1;
+        
+        while( (previous >= 0) && (data[previous] > workingWith) ){
+            data[previous+1] = data[previous];
+            previous--;
+        }
+        
+        data[previous+1] = workingWith;
+        
+    }
+  }
 
     // tools of the trade
     
