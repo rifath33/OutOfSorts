@@ -23,7 +23,11 @@ public class Driver{
           
       }else if(args[2].equals("equal")){
 	      
+          int thing = number.nextInt() % 1000;
           
+          for(int i = 0; i < randData.length; i++){
+            randData[i] = thing;
+          }
           
       }else if(args[2].equals("sorted")){
 	      
