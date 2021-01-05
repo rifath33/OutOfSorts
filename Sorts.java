@@ -6,16 +6,17 @@ public class Sorts{
 
   //@param data the elements to be sorted.
   public static void bubbleSort(int[] data){
-    //boolean wasThereAValueSwapped = false;
+    boolean wasThereAValueSwapped = false;
     for(int i = 0; i < data.length ; i++){
 
       for(int j = 0; j < data.length-i-1; j++){
 
         if(data[j] > data[j+1]){
           swap(data, j+1, j);
-          //wasThereAValueSwapped=true;
+          wasThereAValueSwapped=true;
         }
-        //else wasThereAValueSwapped = false;
+        if(wasThereAValueSwapped == false) 
+        return  ;
 
       }
 
